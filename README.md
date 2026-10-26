@@ -6,7 +6,7 @@
 
 <p align="center">
   <a href="https://github.com/ishandutta2007/Awesome-Awesome-Awesome"><img src="https://img.shields.io/badge/Awesome-%E2%9C%94-blueviolet?style=flat-square&logo=github" alt="Awesome"/></a><a href="https://discord.gg/jc4xtF58Ve"><img src="https://img.shields.io/badge/Discord-5865F2?style=for-the-badge&logo=discord&logoColor=white" alt="Discord" /></a>
-  <a href="https://github.com/ishandutta2007/Awesome-Enterprise-Content-Creation-Platform/stargazers"><img src="https://img.shields.io/github/stars/ishandutta2007/Awesome-Enterprise-Content-Creation-Platform?style=flat-square&color=gold" alt="GitHub Stars"/></a>
+  <a href="https://github.com/ishandutta2007/Awesome-Enterprise-Content-Creation-Platform/stargazers"><img src="https://img.shields.io/github/stars/ishandutta2007/Awesome-Enterprise-Content-Creation-Platform?style=flat-square&color=gold" alt="GitHub_Stars"/></a>
   <a href="https://github.com/ishandutta2007/Awesome-Enterprise-Content-Creation-Platform/network/members"><img src="https://img.shields.io/github/forks/ishandutta2007/Awesome-Enterprise-Content-Creation-Platform?style=flat-square&color=blue" alt="GitHub Forks"/></a>
   <a href="LICENSE"><img src="https://img.shields.io/badge/License-MIT-green.svg?style=flat-square" alt="License"/></a>
   <a href="http://makeapullrequest.com"><img src="https://img.shields.io/badge/PRs-welcome-brightgreen.svg?style=flat-square" alt="PRs Welcome"/></a>
@@ -66,7 +66,7 @@ Below is the verified comparison of leading enterprise SaaS content creation, cr
 
 ## 💻 Open-Source GitHub Projects
 
-Explore the most active open-source repositories for self-hosted design editors, digital asset management (DAM), programmatic creative automation, and AI-assisted generation. Repositories are sorted in descending order by **GitHub Star Count**.
+Explore the most active open-source repositories for self-hosted design editors, digital asset management (DAM), programmatic creative automation, and AI-assisted generation. Repositories are sorted in descending order by **GitHub Stars_Count**.
 
 - **[Remotion](https://github.com/remotion-dev/remotion)** [![Stars](https://img.shields.io/github/stars/remotion-dev/remotion?style=social&color=white)](https://github.com/remotion-dev/remotion/stargazers)  
   🎥 Make videos and dynamic motion graphics programmatically using React, HTML, CSS, and WebGL. Ideal for generating data-driven social video ads, personalized onboarding reels, and automated multi-format video rendering pipelines.
@@ -179,7 +179,7 @@ We actively welcome contributions to keep this directory up-to-date and comprehe
 1. Fork this repository.
 2. Create a feature branch (`git checkout -b feature/new-tool`).
 3. Add the SaaS platform or open-source repository following the established tabular and list conventions.
-4. Verify pricing, company valuation/revenue benchmarks, and star counts.
+4. Verify pricing, company valuation/revenue benchmarks, and Stars_Counts.
 5. Open a Pull Request detailing your additions.
 
 Check out our curated ecosystem hub at [Awesome-Awesome-Awesome](https://github.com/ishandutta2007/Awesome-Awesome-Awesome) for more curated technology stacks.
@@ -209,3 +209,12 @@ Your support keeps this list updated, independent, and high-quality! 🙌
 
 - Distributed under the [MIT License](LICENSE).
 - This is a community-curated list for informational and educational purposes. Product names, logos, and brands are property of their respective owners.
+
+## Star History
+
+<a href="https://star-history.com/#ishandutta2007/Awesome-Enterprise-Content-Creation-Platform&Timeline" align="center">
+  <picture>
+    <source media="(prefers-color-scheme: dark)" srcset="assets/ishandutta2007_Awesome-Enterprise-Content-Creation-Platform_growth.svg">
+    <img alt="Star History Chart" src="assets/ishandutta2007_Awesome-Enterprise-Content-Creation-Platform_growth.svg">
+  </picture>
+</a>
