@@ -217,3 +217,12 @@ Star the repo if you find it useful!
 **Made for enterprises, marketing teams, brand managers, and creative technologists.**  
 
 Let's make enterprise content creation more open, brand-safe, and scalable.
+
+## Star History
+
+<a href="https://star-history.com/#ishandutta2007/Awesome-Enterprise-Content-Creation-Platform&Timeline" align="center">
+  <picture>
+    <source media="(prefers-color-scheme: dark)" srcset="assets/ishandutta2007_Awesome-Enterprise-Content-Creation-Platform_growth.svg">
+    <img alt="Star History Chart" src="assets/ishandutta2007_Awesome-Enterprise-Content-Creation-Platform_growth.svg">
+  </picture>
+</a>
