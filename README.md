@@ -66,7 +66,7 @@ Below is the verified comparison of leading enterprise SaaS content creation, cr
 
 ## 💻 Open-Source GitHub Projects
 
-Explore the most active open-source repositories for self-hosted design editors, digital asset management (DAM), programmatic creative automation, and AI-assisted generation. Repositories are sorted in descending order by **GitHub Stars_Count**.
+Explore the most active open-source repositories for self-hosted design editors, digital asset management (DAM), programmatic creative automation, and AI-assisted generation. Repositories are sorted in descending order by **GitHub_Stars_Count**.
 
 - **[Remotion](https://github.com/remotion-dev/remotion)** [![Stars](https://img.shields.io/github/stars/remotion-dev/remotion?style=social&color=white)](https://github.com/remotion-dev/remotion/stargazers)  
   🎥 Make videos and dynamic motion graphics programmatically using React, HTML, CSS, and WebGL. Ideal for generating data-driven social video ads, personalized onboarding reels, and automated multi-format video rendering pipelines.
