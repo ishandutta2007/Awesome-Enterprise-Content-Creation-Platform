@@ -1,158 +1,194 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 360" width="100%" height="360" preserveAspectRatio="xMidYMid meet">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 280" width="100%" height="100%">
   <defs>
-    <!-- Background Gradients -->
+    <!-- Background Gradient -->
     <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
-      <stop offset="0%" stop-color="#0a0d17" />
+      <stop offset="0%" stop-color="#080c16" />
       <stop offset="50%" stop-color="#0f172a" />
-      <stop offset="100%" stop-color="#050811" />
+      <stop offset="100%" stop-color="#070a12" />
     </linearGradient>
 
-    <linearGradient id="primaryTextGrad" x1="0%" y1="0%" x2="100%" y2="0%">
-      <stop offset="0%" stop-color="#60a5fa" />
-      <stop offset="50%" stop-color="#a855f7" />
-      <stop offset="100%" stop-color="#ec4899" />
+    <!-- Vibrant Heading Gradient -->
+    <linearGradient id="titleGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#38bdf8" />
+      <stop offset="35%" stop-color="#818cf8" />
+      <stop offset="70%" stop-color="#c084fc" />
+      <stop offset="100%" stop-color="#f472b6" />
     </linearGradient>
 
-    <linearGradient id="accentGrad1" x1="0%" y1="0%" x2="100%" y2="100%">
-      <stop offset="0%" stop-color="#38bdf8" stop-opacity="0.25" />
-      <stop offset="100%" stop-color="#6366f1" stop-opacity="0" />
-    </linearGradient>
-
-    <linearGradient id="accentGrad2" x1="0%" y1="0%" x2="100%" y2="100%">
-      <stop offset="0%" stop-color="#f43f5e" stop-opacity="0.2" />
-      <stop offset="100%" stop-color="#8b5cf6" stop-opacity="0" />
+    <!-- Accent Gradients -->
+    <linearGradient id="cyanPurple" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#06b6d4" />
+      <stop offset="100%" stop-color="#8b5cf6" />
     </linearGradient>
 
     <linearGradient id="cardGrad" x1="0%" y1="0%" x2="100%" y2="100%">
-      <stop offset="0%" stop-color="#1e293b" stop-opacity="0.75" />
-      <stop offset="100%" stop-color="#0f172a" stop-opacity="0.6" />
+      <stop offset="0%" stop-color="#1e293b" stop-opacity="0.85" />
+      <stop offset="100%" stop-color="#0f172a" stop-opacity="0.75" />
     </linearGradient>
 
-    <filter id="glow" x="-20%" y="-20%" width="140%" height="140%">
-      <feGaussianBlur stdDeviation="35" result="blur" />
-      <feComposite in="SourceGraphic" in2="blur" operator="over" />
+    <linearGradient id="scanGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#38bdf8" stop-opacity="0" />
+      <stop offset="50%" stop-color="#818cf8" stop-opacity="0.8" />
+      <stop offset="100%" stop-color="#f472b6" stop-opacity="0" />
+    </linearGradient>
+
+    <!-- Filters -->
+    <filter id="glowBlur" x="-30%" y="-30%" width="160%" height="160%">
+      <feGaussianBlur stdDeviation="30" result="blur" />
     </filter>
 
-    <filter id="softGlow" x="-30%" y="-30%" width="160%" height="160%">
-      <feGaussianBlur stdDeviation="50" result="blur" />
+    <filter id="softShadow" x="-10%" y="-10%" width="120%" height="120%">
+      <feDropShadow dx="0" dy="8" stdDeviation="12" flood-color="#000000" flood-opacity="0.5" />
     </filter>
 
-    <!-- CSS Keyframe Animations -->
+    <!-- Subtle Tech Grid -->
+    <pattern id="creativeGrid" width="40" height="40" patternUnits="userSpaceOnUse">
+      <path d="M 40 0 L 0 0 0 40" fill="none" stroke="#334155" stroke-width="0.7" stroke-opacity="0.25" />
+      <circle cx="0" cy="0" r="1.2" fill="#64748b" fill-opacity="0.4" />
+    </pattern>
+
+    <!-- Dynamic CSS Keyframe Animations -->
     <style>
-      @keyframes pulseGlow {
-        0%, 100% { opacity: 0.35; transform: scale(1) translate(0, 0); }
-        50% { opacity: 0.65; transform: scale(1.15) translate(20px, -15px); }
+      <![CDATA[
+      @keyframes pulseLight {
+        0%, 100% { opacity: 0.35; transform: scale(1); }
+        50% { opacity: 0.7; transform: scale(1.15); }
       }
-      @keyframes floatCard1 {
-        0%, 100% { transform: translateY(0px) rotate(0deg); }
-        50% { transform: translateY(-8px) rotate(1deg); }
+      @keyframes floatSlow1 {
+        0%, 100% { transform: translateY(0px); }
+        50% { transform: translateY(-7px); }
       }
-      @keyframes floatCard2 {
-        0%, 100% { transform: translateY(0px) rotate(0deg); }
-        50% { transform: translateY(8px) rotate(-1deg); }
+      @keyframes floatSlow2 {
+        0%, 100% { transform: translateY(0px); }
+        50% { transform: translateY(7px); }
       }
-      @keyframes shimmerBorder {
-        0% { stroke-dashoffset: 800; }
+      @keyframes scanMotion {
+        0% { transform: translateY(0px); opacity: 0.15; }
+        50% { opacity: 0.8; }
+        100% { transform: translateY(280px); opacity: 0.15; }
+      }
+      @keyframes dashMove {
+        0% { stroke-dashoffset: 240; }
         100% { stroke-dashoffset: 0; }
       }
-      @keyframes waveFloat {
-        0%, 100% { transform: translateX(0px); }
-        50% { transform: translateX(-30px); }
+      @keyframes beaconWave {
+        0% { r: 6px; opacity: 0.9; stroke-width: 2px; }
+        100% { r: 36px; opacity: 0; stroke-width: 0.5px; }
       }
 
-      .orb1 { animation: pulseGlow 8s ease-in-out infinite; transform-origin: 200px 100px; }
-      .orb2 { animation: pulseGlow 10s ease-in-out infinite 3s; transform-origin: 1000px 250px; }
-      .card-float-1 { animation: floatCard1 6s ease-in-out infinite; }
-      .card-float-2 { animation: floatCard2 7s ease-in-out infinite 1s; }
-      .wave-anim { animation: waveFloat 12s ease-in-out infinite alternate; }
+      .pulse-orb1 { animation: pulseLight 7s ease-in-out infinite; transform-origin: 180px 90px; }
+      .pulse-orb2 { animation: pulseLight 9s ease-in-out infinite 2s; transform-origin: 820px 190px; }
+      .scan-beam { animation: scanMotion 6s linear infinite; }
+      .dash-flow { stroke-dasharray: 8, 8; animation: dashMove 10s linear infinite; }
+      .float-card-l { animation: floatSlow1 5s ease-in-out infinite; }
+      .float-card-r { animation: floatSlow2 6s ease-in-out infinite 1s; }
+      .beacon-ring { animation: beaconWave 3s cubic-bezier(0.1, 0.8, 0.3, 1) infinite; }
+
+      .font-title { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif; font-weight: 800; }
+      .font-sub { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif; font-weight: 500; }
+      .font-mono { font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace; font-weight: 600; }
+      ]]>
     </style>
   </defs>
 
-  <!-- Canvas Background -->
-  <rect width="100%" height="100%" fill="url(#bgGrad)" rx="16" />
+  <!-- Background Base -->
+  <rect width="1000" height="280" fill="url(#bgGrad)" rx="16" />
+  <rect width="1000" height="280" fill="url(#creativeGrid)" rx="16" />
 
-  <!-- Animated Glowing Ambient Orbs (Background layer) -->
-  <g filter="url(#softGlow)">
-    <circle class="orb1" cx="220" cy="110" r="160" fill="#3b82f6" opacity="0.3" />
-    <circle class="orb2" cx="980" cy="240" r="170" fill="#a855f7" opacity="0.25" />
-    <circle class="orb1" cx="600" cy="280" r="120" fill="#ec4899" opacity="0.15" />
+  <!-- Animated Glowing Atmospheric Orbs (Background) -->
+  <g filter="url(#glowBlur)">
+    <circle class="pulse-orb1" cx="180" cy="90" r="140" fill="#0284c7" opacity="0.4" />
+    <circle class="pulse-orb2" cx="820" cy="190" r="150" fill="#9333ea" opacity="0.35" />
+    <circle cx="500" cy="140" r="120" fill="#db2777" opacity="0.12" />
   </g>
 
-  <!-- Modern Tech Grid Lines (Subtle) -->
-  <g stroke="#334155" stroke-opacity="0.18" stroke-width="1">
-    <line x1="0" y1="60" x2="1200" y2="60" />
-    <line x1="0" y1="120" x2="1200" y2="120" />
-    <line x1="0" y1="180" x2="1200" y2="180" />
-    <line x1="0" y1="240" x2="1200" y2="240" />
-    <line x1="0" y1="300" x2="1200" y2="300" />
-    <line x1="200" y1="0" x2="200" y2="360" />
-    <line x1="400" y1="0" x2="400" y2="360" />
-    <line x1="600" y1="0" x2="600" y2="360" />
-    <line x1="800" y1="0" x2="800" y2="360" />
-    <line x1="1000" y1="0" x2="1000" y2="360" />
+  <!-- Animated Scanning Beam (Background layer) -->
+  <rect class="scan-beam" x="0" y="0" width="1000" height="2" fill="url(#scanGrad)" opacity="0.6" />
+
+  <!-- Animated Flow Lines (Connecting Hubs) -->
+  <path class="dash-flow" d="M 120 70 L 260 70 L 300 120 L 400 120" fill="none" stroke="#38bdf8" stroke-width="1.5" stroke-opacity="0.35" />
+  <path class="dash-flow" d="M 880 210 L 740 210 L 700 160 L 600 160" fill="none" stroke="#c084fc" stroke-width="1.5" stroke-opacity="0.35" />
+  <path class="dash-flow" d="M 160 220 L 280 220 L 320 180" fill="none" stroke="#818cf8" stroke-width="1.5" stroke-opacity="0.3" />
+
+  <!-- Left Creative Beacon / Node Hub -->
+  <g transform="translate(60, 50)">
+    <circle cx="30" cy="30" r="28" fill="none" stroke="#38bdf8" stroke-width="1" stroke-opacity="0.2" stroke-dasharray="4,4" />
+    <circle cx="30" cy="30" r="18" fill="none" stroke="#818cf8" stroke-width="1" stroke-opacity="0.3" />
+    <circle class="beacon-ring" cx="30" cy="30" r="6" fill="none" stroke="#38bdf8" />
+    <circle cx="30" cy="30" r="5" fill="#38bdf8" />
   </g>
 
-  <!-- Flowing Dynamic Waves (Background) -->
-  <path class="wave-anim" d="M -50 280 Q 250 230 550 290 T 1150 260 T 1350 300" fill="none" stroke="url(#primaryTextGrad)" stroke-width="2" stroke-opacity="0.35" />
-  <path class="wave-anim" d="M -50 310 Q 300 270 650 320 T 1250 290 T 1400 320" fill="none" stroke="#60a5fa" stroke-width="1.5" stroke-opacity="0.2" />
-
-  <!-- Left Dynamic Decorative Pill Card (Background/Side) -->
-  <g class="card-float-1" transform="translate(60, 65)">
-    <rect width="180" height="70" rx="12" fill="url(#cardGrad)" stroke="#38bdf8" stroke-opacity="0.3" stroke-width="1" />
-    <circle cx="28" cy="35" r="14" fill="#0284c7" fill-opacity="0.3" stroke="#38bdf8" stroke-width="1.5" />
-    <path d="M23 35 L27 39 L34 31" fill="none" stroke="#38bdf8" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
-    <text x="52" y="30" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="12" font-weight="600" fill="#f8fafc">Digital Assets</text>
-    <text x="52" y="48" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="10" fill="#94a3b8">Governance &amp; DAM</text>
+  <!-- Left Dynamic Floating Pill Card (Background/Side) -->
+  <g class="float-card-l" transform="translate(45, 135)" filter="url(#softShadow)">
+    <rect width="180" height="66" rx="12" fill="url(#cardGrad)" stroke="#38bdf8" stroke-opacity="0.4" stroke-width="1" />
+    <rect x="14" y="16" width="34" height="34" rx="8" fill="#0284c7" fill-opacity="0.25" stroke="#38bdf8" stroke-width="1" />
+    <!-- Folder / DAM icon inside small box -->
+    <path d="M 23 28 L 28 28 L 30 31 L 39 31 L 39 40 L 23 40 Z" fill="none" stroke="#38bdf8" stroke-width="1.5" stroke-linejoin="round" />
+    <text x="58" y="32" class="font-title" font-size="12" fill="#f8fafc">Digital Assets</text>
+    <text x="58" y="47" class="font-sub" font-size="10" fill="#94a3b8">Enterprise DAM</text>
   </g>
 
-  <!-- Right Dynamic Decorative Pill Card (Background/Side) -->
-  <g class="card-float-2" transform="translate(960, 65)">
-    <rect width="180" height="70" rx="12" fill="url(#cardGrad)" stroke="#c084fc" stroke-opacity="0.3" stroke-width="1" />
-    <circle cx="28" cy="35" r="14" fill="#7e22ce" fill-opacity="0.3" stroke="#c084fc" stroke-width="1.5" />
-    <path d="M24 35 L32 35 M28 31 L32 35 L28 39" fill="none" stroke="#c084fc" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
-    <text x="52" y="30" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="12" font-weight="600" fill="#f8fafc">Design Automation</text>
-    <text x="52" y="48" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="10" fill="#94a3b8">Creative APIs &amp; AI</text>
+  <!-- Right Dynamic Floating Pill Card (Background/Side) -->
+  <g class="float-card-r" transform="translate(775, 75)" filter="url(#softShadow)">
+    <rect width="180" height="66" rx="12" fill="url(#cardGrad)" stroke="#c084fc" stroke-opacity="0.4" stroke-width="1" />
+    <rect x="14" y="16" width="34" height="34" rx="8" fill="#7e22ce" fill-opacity="0.25" stroke="#c084fc" stroke-width="1" />
+    <!-- Wand / Automation icon inside small box -->
+    <path d="M 26 39 L 36 29 M 33 26 L 37 30 M 25 25 L 27 25 M 37 39 L 39 39" fill="none" stroke="#c084fc" stroke-width="1.5" stroke-linecap="round" />
+    <text x="58" y="32" class="font-title" font-size="12" fill="#f8fafc">Automation APIs</text>
+    <text x="58" y="47" class="font-sub" font-size="10" fill="#94a3b8">Creative Engines</text>
   </g>
 
-  <!-- Top Category Chip / Pill -->
-  <g transform="translate(470, 48)">
-    <rect width="260" height="30" rx="15" fill="#1e293b" fill-opacity="0.8" stroke="#a855f7" stroke-opacity="0.5" stroke-width="1" />
-    <circle cx="20" cy="15" r="5" fill="#22c55e" />
-    <text x="35" y="20" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="11" font-weight="600" fill="#cbd5e1" letter-spacing="1">CURATED ENTERPRISE ECOSYSTEM</text>
+  <!-- Right Beacon Hub -->
+  <g transform="translate(880, 180)">
+    <circle cx="30" cy="30" r="28" fill="none" stroke="#c084fc" stroke-width="1" stroke-opacity="0.2" stroke-dasharray="4,4" />
+    <circle cx="30" cy="30" r="18" fill="none" stroke="#ec4899" stroke-width="1" stroke-opacity="0.3" />
+    <circle class="beacon-ring" cx="30" cy="30" r="6" fill="none" stroke="#c084fc" />
+    <circle cx="30" cy="30" r="5" fill="#c084fc" />
   </g>
 
-  <!-- FOREGROUND: Main Title and Subtitle (Guaranteed in foreground, crystal clear) -->
-  <!-- Subtle dark backing behind text to guarantee complete legibility -->
-  <rect x="230" y="98" width="740" height="152" rx="16" fill="#0b0f19" fill-opacity="0.75" />
+  <!-- FOREGROUND: Central Card Backdrop (Guarantees Title & Subtitle 100% Foreground Legibility) -->
+  <g transform="translate(210, 30)" filter="url(#softShadow)">
+    <!-- High-contrast frosted glass container -->
+    <rect width="580" height="218" rx="16" fill="#090d16" fill-opacity="0.88" stroke="#334155" stroke-width="1" />
 
-  <!-- Main Headline -->
-  <text x="600" y="152" text-anchor="middle" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="38" font-weight="800" fill="url(#primaryTextGrad)" letter-spacing="-0.5">
-    Enterprise Content Creation
-  </text>
-  <text x="600" y="194" text-anchor="middle" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="28" font-weight="700" fill="#f8fafc" letter-spacing="-0.2">
-    Platform Ecosystem
-  </text>
+    <!-- Top Badge Pill -->
+    <g transform="translate(170, 18)">
+      <rect width="240" height="26" rx="13" fill="#1e293b" fill-opacity="0.9" stroke="#818cf8" stroke-opacity="0.5" stroke-width="1" />
+      <circle cx="16" cy="13" r="4.5" fill="#22c55e" />
+      <text x="28" y="17" class="font-mono" font-size="9.5" fill="#cbd5e1" letter-spacing="1">CURATED ENTERPRISE STACK</text>
+    </g>
 
-  <!-- Subtitle -->
-  <text x="600" y="232" text-anchor="middle" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="14.5" font-weight="500" fill="#94a3b8" letter-spacing="0.2">
-    🎨 Branded Content Generation &bull; ⚡ Design Automation &bull; 🗄️ Digital Asset Management (DAM)
-  </text>
+    <!-- Main Headline Line 1 -->
+    <text x="290" y="85" text-anchor="middle" class="font-title" font-size="30" fill="url(#titleGrad)" letter-spacing="-0.5">
+      Enterprise Content Creation
+    </text>
 
-  <!-- Bottom Interactive Tags Pill Bar -->
-  <g transform="translate(340, 275)">
-    <rect x="0" y="0" width="125" height="26" rx="13" fill="#1e293b" fill-opacity="0.6" stroke="#475569" stroke-width="1" />
-    <text x="62.5" y="17" text-anchor="middle" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="11" font-weight="600" fill="#38bdf8">SaaS Leaders</text>
+    <!-- Main Headline Line 2 -->
+    <text x="290" y="120" text-anchor="middle" class="font-title" font-size="24" fill="#f8fafc" letter-spacing="-0.2">
+      Platform Ecosystem
+    </text>
 
-    <rect x="135" y="0" width="125" height="26" rx="13" fill="#1e293b" fill-opacity="0.6" stroke="#475569" stroke-width="1" />
-    <text x="197.5" y="17" text-anchor="middle" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="11" font-weight="600" fill="#a855f7">Open Source</text>
+    <!-- Subtitle Line -->
+    <text x="290" y="152" text-anchor="middle" class="font-sub" font-size="12.5" fill="#94a3b8" letter-spacing="0.3">
+      Branded Content Generation &#8226; Design Automation &#8226; Digital Asset Management
+    </text>
 
-    <rect x="270" y="0" width="125" height="26" rx="13" fill="#1e293b" fill-opacity="0.6" stroke="#475569" stroke-width="1" />
-    <text x="332.5" y="17" text-anchor="middle" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="11" font-weight="600" fill="#ec4899">Brand Control</text>
+    <!-- Bottom Feature Tags -->
+    <g transform="translate(50, 172)">
+      <rect x="0" y="0" width="105" height="24" rx="12" fill="#1e293b" fill-opacity="0.75" stroke="#38bdf8" stroke-opacity="0.4" stroke-width="1" />
+      <text x="52.5" y="16" text-anchor="middle" class="font-title" font-size="10" fill="#38bdf8">SaaS Leaders</text>
 
-    <rect x="405" y="0" width="115" height="26" rx="13" fill="#1e293b" fill-opacity="0.6" stroke="#475569" stroke-width="1" />
-    <text x="462.5" y="17" text-anchor="middle" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="11" font-weight="600" fill="#4ade80">Template APIs</text>
+      <rect x="115" y="0" width="115" height="24" rx="12" fill="#1e293b" fill-opacity="0.75" stroke="#818cf8" stroke-opacity="0.4" stroke-width="1" />
+      <text x="172.5" y="16" text-anchor="middle" class="font-title" font-size="10" fill="#a5b4fc">Open Source</text>
+
+      <rect x="240" y="0" width="115" height="24" rx="12" fill="#1e293b" fill-opacity="0.75" stroke="#c084fc" stroke-opacity="0.4" stroke-width="1" />
+      <text x="297.5" y="16" text-anchor="middle" class="font-title" font-size="10" fill="#d8b4fe">Brand Control</text>
+
+      <rect x="365" y="0" width="115" height="24" rx="12" fill="#1e293b" fill-opacity="0.75" stroke="#f472b6" stroke-opacity="0.4" stroke-width="1" />
+      <text x="422.5" y="16" text-anchor="middle" class="font-title" font-size="10" fill="#f472b6">Creative APIs</text>
+    </g>
   </g>
 
-  <!-- Outer Border Frame -->
-  <rect x="1" y="1" width="1198" height="358" rx="15" fill="none" stroke="#334155" stroke-opacity="0.4" stroke-width="2" />
+  <!-- Outer Frame Border -->
+  <rect x="1" y="1" width="998" height="278" rx="15" fill="none" stroke="#334155" stroke-opacity="0.4" stroke-width="1.5" />
 </svg>
